@@ -7,9 +7,9 @@ import regex
 import time
 import emoji
 
-api_key = "qelcTijpKdvgZxhBlObav3kwHGwO3jck6qgvpXnHuQmtrA3Fy1zJkVHMqlvQniYX"
-api_secret = "nx7z2DBSaF2BP53dwg4L93HW7vktnzINiU8vdl3X9OEOkzsL1kdrAGI35H9eVniN"
-tapi_key = "5763383464:AAEbTYW9Z7hn87rMgBcZYwMMJgCfrGQeu6o" #telegram bot api
+api_key = ApiKey
+api_secret = ApiSecret
+tapi_key = telegram bot api
 
 #Veriables and lists
 
