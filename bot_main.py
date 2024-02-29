@@ -33,7 +33,7 @@ futures_exchange_info = client.futures_exchange_info()  # request info on all fu
 trading_pairs = [info['symbol'] for info in futures_exchange_info['symbols']]
 
 #Get messages in channel
-URL = 'https://api.telegram.org/bot' + "5763383464:AAEbTYW9Z7hn87rMgBcZYwMMJgCfrGQeu6o" + '/'
+URL = 'https://api.telegram.org/bot' + "<Bot Token>" + '/'
 global last_update_id
 last_update_id = 0
 
@@ -86,7 +86,7 @@ while True:
             regex.sub("\n", "", i)
         print("LST ISSSSSSSSSSSSS: ",lst)
 
-        if channel_id == -1001160655763: #-1001760045017
+        if channel_id == Chanel_Id
             if "#BOT" in lst:
                 #Search in text
                 ticker = "-"
@@ -210,7 +210,7 @@ while True:
             entryMessage = emoji.emojize(':green_circle:') +" "+ database.loc[index[0]]["Coin"] + " " + database.loc[index[0]]["Position"] + " GİRİŞE GELMİŞTİR EFM" + "\n" + entval
             if entryMessage != beforeEntry:
                 beforeEntry = entryMessage
-                requests.post(url="https://api.telegram.org/bot5763383464:AAEbTYW9Z7hn87rMgBcZYwMMJgCfrGQeu6o/sendMessage",data={"chat_id":chat_id,"text":entryMessage}).json
+                requests.post(url="https://api.telegram.org/<Bot Token>/sendMessage",data={"chat_id":chat_id,"text":entryMessage}).json
 
             #TP
             if database.loc[index[0]]["TP Status"] != []:
@@ -219,7 +219,7 @@ while True:
 
                     beforeTP = database.loc[index[0]]["TP Status"][len(database.loc[index[0]]["TP Status"])-1]
 
-                    requests.post(url="https://api.telegram.org/bot5763383464:AAEbTYW9Z7hn87rMgBcZYwMMJgCfrGQeu6o/sendMessage",data={"chat_id":chat_id,"text":database[index[0]]["TP Status"][len(database[index[0]]["TP Status"])-1]}).json
+                    requests.post(url="https://api.telegram.org/<Bot Token>/sendMessage",data={"chat_id":chat_id,"text":database[index[0]]["TP Status"][len(database[index[0]]["TP Status"])-1]}).json
         """
         tpMessage = len(database.loc[index[0]]["TP"][(len(database.loc[index[0]]["TP"])-1)])
         stopMessage = database.loc[index[0]]["Status"]
